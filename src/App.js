@@ -1,23 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Bloks from "./components/Blocks";
+
+const blocks = [
+  {
+    id: "b2",
+    block: "green",
+  },
+  {
+    id: "b3",
+    block: "color",
+  },
+  {
+    id: "b4",
+    block: `${Math.random()}`,
+  },
+  {
+    id: "b5",
+    block: "green",
+  },
+  {
+    id: "b7",
+    block: `${Math.random()}`,
+  },
+  {
+    id: "b8",
+    block: "yellow",
+  },
+];
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Bloks block={blocks} />
     </div>
   );
 }
